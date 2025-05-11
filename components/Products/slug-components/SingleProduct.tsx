@@ -1,10 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function SingleProduct({ id, title, price, image }) {
   return (
     <div className="px-3 py-5 outline-1 rounded-2xl flex flex-col items-center space-y-3">
-      <img
+      <Image
         src={image}
+        width={500}
+        height={300}
         alt={title}
         className="w-64 h-auto outline rounded-2xl bg-gradient-to-br from-gray-800 via-gray-400 to-gray-800"
       />

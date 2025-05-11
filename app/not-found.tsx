@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function NotFoundPage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 text-white px-4">
@@ -10,12 +12,12 @@ function NotFoundPage() {
       <p className="text-md sm:text-lg text-zinc-400 mb-6 max-w-md text-center">
         The page you're looking for doesn’t exist or has been moved.
       </p>
-      <a
+      <Link
         href="/"
         className="px-6 py-3 rounded-2xl bg-green-500 hover:bg-green-600 transition-all duration-200 text-white font-semibold shadow-lg"
       >
         Go Back Home
-      </a>
+      </Link>
     </div>
   );
 }
