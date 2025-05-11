@@ -9,9 +9,9 @@ function NotFoundPage() {
       <p className="text-xl sm:text-2xl font-semibold mb-4 text-zinc-200">
         Oops! Page not found.
       </p>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
+
       <p className="text-md sm:text-lg text-zinc-400 mb-6 max-w-md text-center">
-        The page you're looking for doesn’t exist or has been moved.
+        The page you&apos;re looking for doesn’t exist or has been moved.
       </p>
       <Link
         href="/"
