@@ -1,6 +1,7 @@
 import SingleProduct from "@/components/Products/slug-components/SingleProduct";
 import axios from "axios";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const response = await axios.get("https://dummyjson.com/products");
@@ -26,7 +27,13 @@ async function getProduct(id: string) {
   }
 }
 
-async function ProductSlug({ params }: { params: { product: string[] } }) {
+interface PageProps {
+  params: {
+    product: string[];
+  };
+}
+
+async function ProductSlug({ params }: PageProps): Promise<Metadata> {
   const { product } = await params;
   const id = product[0];
   const productData = await getProduct(id);
